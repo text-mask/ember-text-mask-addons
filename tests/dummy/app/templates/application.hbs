@@ -1,3 +1,63 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">Ember-text-mask-addons</h2>
+
+<h3><code>&#123;&#123;create-number-mask&#125;&#125;</code></h3>
+<div>
+{{code-snippet name="create-number-mask-currency.hbs"}}
+
+  {{! BEGIN-SNIPPET create-number-mask-currency}}
+  {{create-number-mask
+    value=currencyValue
+    allowDecimal=true
+    prefix="£ "
+    placeholder="£"}}
+  {{! END-SNIPPET}}
+
+</div>
+
+<div>
+
+  {{code-snippet name="create-number-mask-percent.hbs"}}
+
+  {{! BEGIN-SNIPPET create-number-mask-percent}}
+  {{create-number-mask
+    value=percentValue
+    prefix=""
+    suffix=" %"
+    placeholder="%"}}
+  {{! END-SNIPPET}}
+
+</div>
+
+<hr />
+
+<h3><code>&#123;&#123;email-mask&#125;&#125;</code></h3>
+
+<div>
+
+  {{code-snippet name="email-mask.hbs"}}
+
+  {{! BEGIN-SNIPPET email-mask}}
+  {{email-mask
+    value=email
+    placeholder="email@example.com"}}
+  {{! END-SNIPPET}}
+
+</div>
+
+<hr />
+
+<h3><code>&#123;&#123;auto-corrected-mmddyyyy-pipe&#125;&#125;</code></h3>
+
+<div>
+
+  {{code-snippet name="auto-corrected-mmddyyyy-pipe.hbs"}}
+
+  {{! BEGIN-SNIPPET auto-corrected-mmddyyyy-pipe}}
+  {{auto-corrected-mmddyyyy-pipe
+    value=date}}
+  {{! END-SNIPPET}}
+
+</div>
+
 
 {{outlet}}
