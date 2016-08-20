@@ -6,6 +6,6 @@ moduleForComponent('auto-corrected-mmddyyyy-pipe', 'Integration | Component | au
 });
 
 test('it renders an input element', function(assert) {
-  this.render(hbs`{{mask-input}}`);
+  this.render(hbs`{{auto-corrected-mmddyyyy-pipe}}`);
   assert.equal(this.$('input').length, 1);
 });
