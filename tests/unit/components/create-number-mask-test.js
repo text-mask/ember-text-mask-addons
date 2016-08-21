@@ -1,4 +1,7 @@
+import Ember from 'ember';
 import { moduleForComponent, test } from 'ember-qunit';
+import TextMaskAddons from 'ember-text-mask-addons';
+import { createNumberMask } from 'ember-text-mask-addons';
 
 moduleForComponent('create-number-mask', 'Unit | Component | create number mask', {
   // Specify the other units that are required for this test
@@ -14,6 +17,16 @@ test('it renders', function(assert) {
 
   this.render();
   assert.equal(component._state, 'inDOM');
+});
+
+test('TextMaskAddons.createNumberMask should be a function', function(assert) {
+  assert.expect(1);
+  assert.equal(Ember.typeOf(TextMaskAddons.createNumberMask), 'function');
+});
+
+test('TextMaskAddons.createNumberMask is the same as createNumberMask', function(assert) {
+  assert.expect(1);
+  assert.deepEqual(TextMaskAddons.createNumberMask, createNumberMask);
 });
 
 test('input() method calls textMaskInputElement.update()', function(assert) {
