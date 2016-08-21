@@ -1,9 +1,9 @@
-import MaskInputComponent from 'ember-text-mask/components/mask-input';
-import textMaskAddons from 'ember-text-mask-addons';
+import MaskedInputComponent from 'ember-text-mask/components/masked-input';
+import { autoCorrectedMmddyyyyPipe } from 'ember-text-mask-addons';
 
-export default MaskInputComponent.extend({
+export default MaskedInputComponent.extend({
   keepCharPositions: true,
   placeholderChar: '\u2000',
   mask: [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/],
-  pipe: textMaskAddons.autoCorrectedMmddyyyyPipe
+  pipe: autoCorrectedMmddyyyyPipe
 });

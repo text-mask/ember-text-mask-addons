@@ -1,5 +1,7 @@
+import Ember from 'ember';
 import { moduleForComponent, test } from 'ember-qunit';
-import textMaskAddons from 'ember-text-mask-addons';
+import TextMaskAddons from 'ember-text-mask-addons';
+import { autoCorrectedMmddyyyyPipe } from 'ember-text-mask-addons';
 
 moduleForComponent('auto-corrected-mmddyyyy-pipe', 'Unit | Component | auto corrected mmddyyyy pipe', {
   // Specify the other units that are required for this test
@@ -15,6 +17,16 @@ test('it renders', function(assert) {
 
   this.render();
   assert.equal(component._state, 'inDOM');
+});
+
+test('TextMaskAddons.autoCorrectedMmddyyyyPipe should be a function', function(assert) {
+  assert.expect(1);
+  assert.equal(Ember.typeOf(TextMaskAddons.autoCorrectedMmddyyyyPipe), 'function');
+});
+
+test('TextMaskAddons.autoCorrectedMmddyyyyPipe is the same as autoCorrectedMmddyyyyPipe', function(assert) {
+  assert.expect(1);
+  assert.deepEqual(TextMaskAddons.autoCorrectedMmddyyyyPipe, autoCorrectedMmddyyyyPipe);
 });
 
 test('input() method calls textMaskInputElement.update()', function(assert) {
@@ -64,5 +76,5 @@ test('pipe should be autoCorrectedMmddyyyyPipe', function(assert) {
   let component = this.subject();
   this.render();
 
-  assert.equal(component.get('pipe'), textMaskAddons.autoCorrectedMmddyyyyPipe);
+  assert.equal(component.get('pipe'), TextMaskAddons.autoCorrectedMmddyyyyPipe);
 });
