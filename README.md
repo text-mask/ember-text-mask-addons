@@ -58,7 +58,7 @@ export default Ember.Controller.extend({
 
 See [Text Mask Addons](https://github.com/text-mask/text-mask/blob/master/addons/README.md#text-mask-addons) for more information and usage instructions.
 
-For more information about the attributes that the `masked-input` component accepts, see the [documentation here](https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#readme).
+For more information about the attributes that the `{{masked-input}}` component accepts, see the [documentation here](https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#readme).
 
 ## Example
 
