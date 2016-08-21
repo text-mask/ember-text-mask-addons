@@ -9,29 +9,37 @@ This Ember-cli addon provides a set of ready-to-use pipes and masks that can be 
 ember install ember-text-mask-addons
 ```
 
-### Masks
+* Masks
+  * `createNumberMask`
+  * `emailMask`
 
-* `createNumberMask`
-* `emailMask`
-
-### Pipes
-
-* `autoCorrectedMmddyyyyPipe`
+* Pipes
+  * `autoCorrectedMmddyyyyPipe`
 
 ## Usage
 
 ### Components
 
-The addon provides components that can be used directly in templates.
+The addon provides Ember components that can be used directly in templates.
 
 ```hbs
 {{create-number-mask}}
 {{email-mask}}
 {{auto-corrected-mmddyyyy-pipe}}
 ```
-### Using the pipes and masks
+### Importing the masks and pipes
 
-Or, you can import the masks or pipes and use them with the `{{masked-input}}` component provided by [Ember-text-mask](https://github.com/text-mask/text-mask/tree/master/ember#ember-input-mask).
+You can also import the masks or pipes and use them with the `{{masked-input}}` component provided by [Ember-text-mask](https://github.com/text-mask/text-mask/tree/master/ember#ember-input-mask).
+
+For example, to import the `emailMask`:
+
+```js
+import { emailMask } from 'ember-text-mask-addons';
+
+// ... do something with the emailMask
+```
+
+If you wanted to use the `emailMask` with the `{{masked-input}}` component, you would do this:
 
 ```js
 import Ember from 'ember';
