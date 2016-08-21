@@ -2,19 +2,19 @@
 
 This Ember-cli addon provides a set of ready-to-use pipes and masks that can be used with [Ember-text-mask](https://github.com/text-mask/text-mask/tree/master/ember#ember-input-mask).
 
-
-## Installation
-
-```bash
-ember install ember-text-mask-addons
-```
-
 * Masks
   * `createNumberMask`
   * `emailMask`
 
 * Pipes
   * `autoCorrectedMmddyyyyPipe`
+
+
+## Installation
+
+```bash
+ember install ember-text-mask-addons
+```
 
 ## Usage
 
