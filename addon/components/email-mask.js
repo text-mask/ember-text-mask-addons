@@ -1,6 +1,6 @@
-import MaskInputComponent from 'ember-text-mask/components/mask-input';
-import textMaskAddons from 'ember-text-mask-addons';
+import MaskedInputComponent from 'ember-text-mask/components/masked-input';
+import { emailMask } from 'ember-text-mask-addons';
 
-export default MaskInputComponent.extend({
-  mask: textMaskAddons.emailMask
+export default MaskedInputComponent.extend({
+  mask: emailMask
 });
