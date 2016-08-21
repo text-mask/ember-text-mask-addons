@@ -1,34 +1,49 @@
 # Ember-text-mask-addons
 
-This Ember-cli addon provides a set of ready-to-use pipes and masks that can be used with Ember-text-mask.
+This Ember-cli addon provides a set of ready-to-use pipes and masks that can be used with [Ember-text-mask](https://github.com/text-mask/text-mask/tree/master/ember#ember-input-mask).
 
 
-## Getting started
-
-First, install it.
+## Installation
 
 ```bash
 ember install ember-text-mask-addons
 ```
 
-Then, use it as follows:
+### Masks
 
-Add the following markup to your template to render a masked input component.
+* `createNumberMask`
+* `emailMask`
+
+### Pipes
+
+* `autoCorrectedMmddyyyyPipe`
+
+## Usage
+
+### Components
+
+The addon provides components that can be used directly in templates.
 
 ```hbs
-{{masked-input mask=mask}}
+{{create-number-mask}}
+{{email-mask}}
+{{auto-corrected-mmddyyyy-pipe}}
 ```
+### Using the pipes and masks
 
-In the template's controller, specify a `mask`.
+Or, you can import the masks or pipes and use them with the `{{masked-input}}` component provided by [Ember-text-mask](https://github.com/text-mask/text-mask/tree/master/ember#ember-input-mask).
 
 ```js
 import Ember from 'ember';
+import { emailMask } from 'ember-text-mask-addons';
 
 export default Ember.Controller.extend({
-
-  mask: ['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]
-
+  emailMask: emailMask
 });
+```
+
+```hbs
+{{masked-input mask=emailMask}}
 ```
 
 ## Documentation
