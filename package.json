@@ -1,7 +1,7 @@
 {
   "name": "ember-text-mask-addons",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Addons for Text Mask https://github.com/text-mask/text-mask",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,12 +11,15 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "bugs": {
+    "url": "https://github.com/text-mask/ember-text-mask-addons/issues"
+  },
+  "repository": "https://github.com/text-mask/ember-text-mask-addons",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
-  "license": "MIT",
+  "author": "Loz Jackson",
+  "license": "CC0-1.0",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
     "ember-ajax": "0.7.1",
