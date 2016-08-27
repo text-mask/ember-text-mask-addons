@@ -48,7 +48,9 @@
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.6"
+    "broccoli-merge-trees": "^1.1.4",
+    "ember-cli-babel": "^5.1.6",
+    "text-mask-addons": "^0.7.1"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
