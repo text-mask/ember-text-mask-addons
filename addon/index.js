@@ -1,6 +1,6 @@
-import AutoCorrectedMmddyyyyPipe from './lib/auto-corrected-mmddyyyy-pipe';
-import CreateNumberMask from './lib/create-number-mask';
-import EmailMask from './lib/email-mask';
+import AutoCorrectedMmddyyyyPipe from 'ember-text-mask-addons/autoCorrectedMmddyyyyPipe';
+import CreateNumberMask from 'ember-text-mask-addons/createNumberMask';
+import EmailMask from 'ember-text-mask-addons/emailMask';
 
 const autoCorrectedMmddyyyyPipe = AutoCorrectedMmddyyyyPipe.autoCorrectedMmddyyyyPipe.default;
 const createNumberMask = CreateNumberMask.createNumberMask.default;
