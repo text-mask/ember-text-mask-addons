@@ -11,6 +11,7 @@
 .jshintrc
 .watchmanconfig
 .travis.yml
+.DS_Store
 bower.json
 ember-cli-build.js
 testem.js
