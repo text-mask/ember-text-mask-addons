@@ -1,6 +1,6 @@
 {
   "name": "ember-text-mask-addons",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Addons for Ember Text Mask https://github.com/text-mask/text-mask/ember",
   "directories": {
     "doc": "doc",
