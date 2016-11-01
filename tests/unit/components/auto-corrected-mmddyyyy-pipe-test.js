@@ -3,6 +3,8 @@ import { moduleForComponent, test } from 'ember-qunit';
 import TextMaskAddons from 'ember-text-mask-addons';
 import { autoCorrectedMmddyyyyPipe } from 'ember-text-mask-addons';
 
+const { run } = Ember;
+
 moduleForComponent('auto-corrected-mmddyyyy-pipe', 'Unit | Component | auto corrected mmddyyyy pipe', {
   // Specify the other units that are required for this test
   // needs: ['component:foo', 'helper:bar'],
@@ -29,18 +31,18 @@ test('TextMaskAddons.autoCorrectedMmddyyyyPipe is the same as autoCorrectedMmddy
   assert.deepEqual(TextMaskAddons.autoCorrectedMmddyyyyPipe, autoCorrectedMmddyyyyPipe);
 });
 
-test('input() method calls textMaskInputElement.update()', function(assert) {
+test('update() method calls textMaskInputElement.update()', function(assert) {
   assert.expect(1);
 
   let component = this.subject();
   this.render();
 
   // stub the textMaskInputElement
-  component.set('textMaskInputElement', {
+  run(() => component.set('textMaskInputElement', {
     update: () => assert.ok(true)
-  });
+  }));
 
-  component.input();
+  component.update();
 });
 
 test('keepCharPositions should be true', function(assert) {

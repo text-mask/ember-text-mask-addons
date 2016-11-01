@@ -3,6 +3,8 @@ import { moduleForComponent, test } from 'ember-qunit';
 import TextMaskAddons from 'ember-text-mask-addons';
 import { createNumberMask } from 'ember-text-mask-addons';
 
+const { run } = Ember;
+
 moduleForComponent('create-number-mask', 'Unit | Component | create number mask', {
   // Specify the other units that are required for this test
   // needs: ['component:foo', 'helper:bar'],
@@ -29,16 +31,16 @@ test('TextMaskAddons.createNumberMask is the same as createNumberMask', function
   assert.deepEqual(TextMaskAddons.createNumberMask, createNumberMask);
 });
 
-test('input() method calls textMaskInputElement.update()', function(assert) {
+test('update() method calls textMaskInputElement.update()', function(assert) {
   assert.expect(1);
 
   var component = this.subject();
   this.render();
 
   // stub the textMaskInputElement
-  component.set('textMaskInputElement', {
+  run(() => component.set('textMaskInputElement', {
     update: () => assert.ok(true)
-  });
+  }));
 
-  component.input();
+  component.update();
 });
