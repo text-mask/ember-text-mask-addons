@@ -6,7 +6,6 @@
 
   {{! BEGIN-SNIPPET create-number-mask-currency}}
   {{create-number-mask
-    value=currencyValue
     allowDecimal=true
     prefix="£ "
     placeholder="£"}}
@@ -20,7 +19,6 @@
 
   {{! BEGIN-SNIPPET create-number-mask-percent}}
   {{create-number-mask
-    value=percentValue
     prefix=""
     suffix=" %"
     placeholder="%"}}
@@ -38,7 +36,6 @@
 
   {{! BEGIN-SNIPPET email-mask}}
   {{email-mask
-    value=email
     placeholder="email@example.com"}}
   {{! END-SNIPPET}}
 
@@ -46,15 +43,23 @@
 
 <hr />
 
-<h3><code>&#123;&#123;auto-corrected-mmddyyyy-pipe&#125;&#125;</code></h3>
+<h3><code>&#123;&#123;create-auto-corrected-date-pipe&#125;&#125;</code></h3>
 
 <div>
 
-  {{code-snippet name="auto-corrected-mmddyyyy-pipe.hbs"}}
+  {{code-snippet name="create-auto-corrected-date-pipe.hbs"}}
 
-  {{! BEGIN-SNIPPET auto-corrected-mmddyyyy-pipe}}
-  {{auto-corrected-mmddyyyy-pipe
-    value=date}}
+  {{! BEGIN-SNIPPET create-auto-corrected-date-pipe}}
+  {{create-auto-corrected-date-pipe}}
+  {{! END-SNIPPET}}
+
+  <p>The default value for <code>dateFormat</code> is <code>mm/dd/yyyy</code></p>
+
+  {{code-snippet name="create-auto-corrected-date-pipe-dateFormat.hbs"}}
+
+  {{! BEGIN-SNIPPET create-auto-corrected-date-pipe-dateFormat}}
+  {{create-auto-corrected-date-pipe
+    dateFormat="dd/mm/yyyy"}}
   {{! END-SNIPPET}}
 
 </div>

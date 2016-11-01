@@ -1,12 +1,12 @@
-import AutoCorrectedMmddyyyyPipe from 'ember-text-mask-addons/autoCorrectedMmddyyyyPipe';
+import CreateAutoCorrectedDatePipe from 'ember-text-mask-addons/createAutoCorrectedDatePipe';
 import CreateNumberMask from 'ember-text-mask-addons/createNumberMask';
 import EmailMask from 'ember-text-mask-addons/emailMask';
 
-const autoCorrectedMmddyyyyPipe = AutoCorrectedMmddyyyyPipe.autoCorrectedMmddyyyyPipe.default;
+const createAutoCorrectedDatePipe = CreateAutoCorrectedDatePipe.createAutoCorrectedDatePipe.default;
 const createNumberMask = CreateNumberMask.createNumberMask.default;
 const emailMask = EmailMask.emailMask.default;
 
-export default { autoCorrectedMmddyyyyPipe, createNumberMask, emailMask };
-export { autoCorrectedMmddyyyyPipe };
+export default { createAutoCorrectedDatePipe, createNumberMask, emailMask };
+export { createAutoCorrectedDatePipe };
 export { createNumberMask };
 export { emailMask };
