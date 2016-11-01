@@ -3,11 +3,11 @@
 This Ember-cli addon provides a set of ready-to-use pipes and masks that can be used with [Ember-text-mask](https://github.com/text-mask/text-mask/tree/master/ember#ember-input-mask).
 
 * Masks
-  * `createNumberMask`
+  * `numberMask`
   * `emailMask`
 
 * Pipes
-  * `autoCorrectedMmddyyyyPipe`
+  * `autoCorrectedDatePipe`
 
 
 ## Installation
@@ -23,15 +23,19 @@ ember install ember-text-mask-addons
 The addon provides Ember components that can be used directly in templates.
 
 ```hbs
-{{create-number-mask}}
+{{number-mask}}
+
 {{email-mask}}
-{{auto-corrected-mmddyyyy-pipe}}
+
+{{auto-corrected-date-pipe}}
 ```
 ### Importing the masks and pipes
 
 You can also import the masks or pipes and use them with the `{{masked-input}}` component provided by [Ember-text-mask](https://github.com/text-mask/text-mask/tree/master/ember#ember-input-mask).
 
-For example, to import the `emailMask`:
+#### emailMask
+
+To import and use the `emailMask`:
 
 ```js
 import { emailMask } from 'ember-text-mask-addons';
@@ -53,6 +57,45 @@ export default Ember.Controller.extend({
 ```hbs
 {{masked-input mask=emailMask}}
 ```
+
+#### createNumberMask
+
+You can use the `createNumberMask()` method to create a `numberMask`.
+
+```js
+import Ember from 'ember';
+import { createNumberMask } from 'ember-text-mask-addons';
+
+export default Ember.Controller.extend({
+  numberMask: createNumberMask()
+});
+```
+
+Then you can you the `numberMask` with the `{{masked-input}}` component.
+
+```hbs
+{{masked-input mask=numberMask}}
+```
+
+#### createAutoCorrectedDatePipe
+
+You can use the `createAutoCorrectedDatePipe()` method to create an `autoCorrectedDatePipe`.
+
+```js
+import Ember from 'ember';
+import { createAutoCorrectedDatePipe } from 'ember-text-mask-addons';
+
+export default Ember.Controller.extend({
+  autoCorrectedDatePipe: createAutoCorrectedDatePipe('mm/dd/yyyy')
+});
+```
+
+Then you can you the `autoCorrectedDatePipe` with the `{{masked-input}}` component.
+
+```hbs
+{{masked-input pipe=autoCorrectedDatePipe}}
+```
+
 
 ## Documentation
 

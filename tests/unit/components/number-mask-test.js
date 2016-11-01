@@ -5,7 +5,7 @@ import { createNumberMask } from 'ember-text-mask-addons';
 
 const { run } = Ember;
 
-moduleForComponent('create-number-mask', 'Unit | Component | create number mask', {
+moduleForComponent('number-mask', 'Unit | Component | number mask', {
   // Specify the other units that are required for this test
   // needs: ['component:foo', 'helper:bar'],
   unit: true

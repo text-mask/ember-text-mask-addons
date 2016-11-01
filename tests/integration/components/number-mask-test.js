@@ -1,11 +1,11 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('create-auto-corrected-date-pipe', 'Integration | Component | create auto corrected date pipe', {
+moduleForComponent('number-mask', 'Integration | Component | number mask', {
   integration: true
 });
 
 test('it renders an input element', function(assert) {
-  this.render(hbs`{{create-auto-corrected-date-pipe}}`);
+  this.render(hbs`{{number-mask}}`);
   assert.equal(this.$('input').length, 1);
 });

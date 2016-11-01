@@ -5,7 +5,7 @@ import { createAutoCorrectedDatePipe } from 'ember-text-mask-addons';
 
 const { run } = Ember;
 
-moduleForComponent('create-auto-corrected-date-pipe', 'Unit | Component | create auto corrected date pipe', {
+moduleForComponent('auto-corrected-date-pipe', 'Unit | Component | auto corrected date pipe', {
   // Specify the other units that are required for this test
   // needs: ['component:foo', 'helper:bar'],
   unit: true

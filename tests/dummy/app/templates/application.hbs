@@ -1,11 +1,11 @@
 <h2 id="title">Ember-text-mask-addons</h2>
 
-<h3><code>&#123;&#123;create-number-mask&#125;&#125;</code></h3>
+<h3><code>&#123;&#123;number-mask&#125;&#125;</code></h3>
 <div>
-{{code-snippet name="create-number-mask-currency.hbs"}}
+{{code-snippet name="number-mask-currency.hbs"}}
 
-  {{! BEGIN-SNIPPET create-number-mask-currency}}
-  {{create-number-mask
+  {{! BEGIN-SNIPPET number-mask-currency}}
+  {{number-mask
     allowDecimal=true
     prefix="£ "
     placeholder="£"}}
@@ -15,10 +15,10 @@
 
 <div>
 
-  {{code-snippet name="create-number-mask-percent.hbs"}}
+  {{code-snippet name="number-mask-percent.hbs"}}
 
-  {{! BEGIN-SNIPPET create-number-mask-percent}}
-  {{create-number-mask
+  {{! BEGIN-SNIPPET number-mask-percent}}
+  {{number-mask
     prefix=""
     suffix=" %"
     placeholder="%"}}
@@ -43,22 +43,22 @@
 
 <hr />
 
-<h3><code>&#123;&#123;create-auto-corrected-date-pipe&#125;&#125;</code></h3>
+<h3><code>&#123;&#123;auto-corrected-date-pipe&#125;&#125;</code></h3>
 
 <div>
 
-  {{code-snippet name="create-auto-corrected-date-pipe.hbs"}}
+  {{code-snippet name="auto-corrected-date-pipe.hbs"}}
 
-  {{! BEGIN-SNIPPET create-auto-corrected-date-pipe}}
-  {{create-auto-corrected-date-pipe}}
+  {{! BEGIN-SNIPPET auto-corrected-date-pipe}}
+  {{auto-corrected-date-pipe}}
   {{! END-SNIPPET}}
 
   <p>The default value for <code>dateFormat</code> is <code>mm/dd/yyyy</code></p>
 
-  {{code-snippet name="create-auto-corrected-date-pipe-dateFormat.hbs"}}
+  {{code-snippet name="auto-corrected-date-pipe-dateFormat.hbs"}}
 
-  {{! BEGIN-SNIPPET create-auto-corrected-date-pipe-dateFormat}}
-  {{create-auto-corrected-date-pipe
+  {{! BEGIN-SNIPPET auto-corrected-date-pipe-dateFormat}}
+  {{auto-corrected-date-pipe
     dateFormat="dd/mm/yyyy"}}
   {{! END-SNIPPET}}
 
