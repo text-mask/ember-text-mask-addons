@@ -3,6 +3,8 @@ import { moduleForComponent, test } from 'ember-qunit';
 import TextMaskAddons from 'ember-text-mask-addons';
 import { emailMask } from 'ember-text-mask-addons';
 
+const { run } = Ember;
+
 moduleForComponent('email-mask', 'Unit | Component | email mask', {
   // Specify the other units that are required for this test
   // needs: ['component:foo', 'helper:bar'],
@@ -31,18 +33,18 @@ test('TextMaskAddons.emailMask is the same as emailMask', function(assert) {
   assert.deepEqual(TextMaskAddons.emailMask, emailMask);
 });
 
-test('input() method calls textMaskInputElement.update()', function(assert) {
+test('update() method calls textMaskInputElement.update()', function(assert) {
   assert.expect(1);
 
   var component = this.subject();
   this.render();
 
   // stub the textMaskInputElement
-  component.set('textMaskInputElement', {
+  run(() => component.set('textMaskInputElement', {
     update: () => assert.ok(true)
-  });
+  }));
 
-  component.input();
+  component.update();
 });
 
 test('mask should be emailMask', function(assert) {
