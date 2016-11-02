@@ -64,55 +64,57 @@ test('placeholderChar should be \u2000', function(assert) {
 });
 
 test('mask', function(assert) {
-  assert.expect(1);
+  assert.expect(3);
 
   let component = this.subject();
   this.render();
 
-  assert.deepEqual(component.get('mask'), [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]);
+  let maskObject = component.get('mask');
+  assert.equal(typeof maskObject, 'object');
+  assert.deepEqual(maskObject.mask, [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]);
+  assert.equal(typeof maskObject.pipe, 'function');
 });
 
 test('mask - dateFormat dd/mm/yyyy', function(assert) {
-  assert.expect(1);
+  assert.expect(2);
 
   let component = this.subject({ dateFormat: 'dd/mm/yyyy' });
   this.render();
 
-  assert.deepEqual(component.get('mask'), [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]);
+  let maskObject = component.get('mask');
+  assert.deepEqual(maskObject.mask, [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]);
+  assert.equal(typeof maskObject.pipe, 'function');
 });
 
 test('mask - dateFormat yyyy/mm/dd', function(assert) {
-  assert.expect(1);
+  assert.expect(2);
 
   let component = this.subject({ dateFormat: 'yyyy/mm/dd' });
   this.render();
 
-  assert.deepEqual(component.get('mask'), [/\d/, /\d/, /\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/]);
+  let maskObject = component.get('mask');
+  assert.deepEqual(maskObject.mask, [/\d/, /\d/, /\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/]);
+  assert.equal(typeof maskObject.pipe, 'function');
 });
 
 test('mask - dateFormat dd-mm-yyyy', function(assert) {
-  assert.expect(1);
+  assert.expect(2);
 
   let component = this.subject({ dateFormat: 'dd-mm-yyyy' });
   this.render();
 
-  assert.deepEqual(component.get('mask'), [/\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]);
+  let maskObject = component.get('mask');
+  assert.deepEqual(maskObject.mask, [/\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]);
+  assert.equal(typeof maskObject.pipe, 'function');
 });
 
-test('mask - dateFormat dd-mm-yyyy', function(assert) {
-  assert.expect(1);
+test('mask - dateFormat dd|mm|yyyy', function(assert) {
+  assert.expect(2);
 
   let component = this.subject({ dateFormat: 'dd|mm|yy' });
   this.render();
 
-  assert.deepEqual(component.get('mask'), [/\d/, /\d/, '|', /\d/, /\d/, '|', /\d/, /\d/]);
-});
-
-test('pipe should be a function', function(assert) {
-  assert.expect(1);
-
-  let component = this.subject();
-  this.render();
-
-  assert.equal(typeof component.get('pipe'), 'function');
+  let maskObject = component.get('mask');
+  assert.deepEqual(maskObject.mask, [/\d/, /\d/, '|', /\d/, /\d/, '|', /\d/, /\d/]);
+  assert.equal(typeof maskObject.pipe, 'function');
 });
