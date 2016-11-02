@@ -11,14 +11,14 @@ export default MaskedInputComponent.extend({
   keepCharPositions: true,
   placeholderChar: '\u2000',
 
+  /*
+    Return an object with both mask and pipe.
+  */
   mask: Ember.computed('dateFormat', function () {
     let dateFormat = this.get('dateFormat') || defaultDateFormat;
-    return dateFormat.split('').map(char => {
-      return (dateFormatChars.indexOf(char.toLowerCase()) === -1) ? char:/\d/;
-    });
-  }),
-
-  pipe: Ember.computed('dateFormat', function () {
-    return createAutoCorrectedDatePipe(this.get('dateFormat'));
+    return {
+      mask: dateFormat.split('').map(char => (dateFormatChars.indexOf(char.toLowerCase()) === -1) ? char:/\d/),
+      pipe: createAutoCorrectedDatePipe(dateFormat)
+    };
   })
 });
