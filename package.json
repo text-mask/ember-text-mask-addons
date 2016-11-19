@@ -45,7 +45,13 @@
     "phantomjs-prebuilt": "^2.1.12"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "text mask",
+    "input mask",
+    "string mask",
+    "input formatting",
+    "text formatting",
+    "string formatting"
   ],
   "dependencies": {
     "broccoli-merge-trees": "^1.1.4",
