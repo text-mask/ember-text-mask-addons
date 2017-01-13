@@ -71,7 +71,7 @@ export default Ember.Controller.extend({
 });
 ```
 
-Then you can you the `numberMask` with the `{{masked-input}}` component.
+Then you can use the `numberMask` with the `{{masked-input}}` component.
 
 ```hbs
 {{masked-input mask=numberMask}}
@@ -90,7 +90,7 @@ export default Ember.Controller.extend({
 });
 ```
 
-Then you can you the `autoCorrectedDatePipe` with the `{{masked-input}}` component.
+Then you can use the `autoCorrectedDatePipe` with the `{{masked-input}}` component.
 
 ```hbs
 {{masked-input pipe=autoCorrectedDatePipe}}
