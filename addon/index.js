@@ -1,10 +1,6 @@
-import CreateAutoCorrectedDatePipe from 'ember-text-mask-addons/createAutoCorrectedDatePipe';
-import CreateNumberMask from 'ember-text-mask-addons/createNumberMask';
-import EmailMask from 'ember-text-mask-addons/emailMask';
-
-const createAutoCorrectedDatePipe = CreateAutoCorrectedDatePipe.createAutoCorrectedDatePipe.default;
-const createNumberMask = CreateNumberMask.createNumberMask.default;
-const emailMask = EmailMask.emailMask.default;
+import createAutoCorrectedDatePipe from 'ember-text-mask-addons/createAutoCorrectedDatePipe';
+import createNumberMask from 'ember-text-mask-addons/createNumberMask';
+import emailMask from 'ember-text-mask-addons/emailMask';
 
 export default { createAutoCorrectedDatePipe, createNumberMask, emailMask };
 export { createAutoCorrectedDatePipe };

@@ -8,7 +8,7 @@ module.exports = {
   name: 'ember-text-mask-addons',
 
   treeForAddon: function(tree) {
-    var textMaskAddonsPath = path.dirname(require.resolve('text-mask-addons/dist/emailMask.js'));
+    var textMaskAddonsPath = path.dirname(require.resolve('text-mask-addons/src/emailMask.js'));
     var textMaskAddonsTree = this.treeGenerator(textMaskAddonsPath);
 
     var trees = mergeTrees([textMaskAddonsTree, tree], {
