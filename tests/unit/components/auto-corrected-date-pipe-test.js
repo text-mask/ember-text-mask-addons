@@ -3,7 +3,7 @@ import { moduleForComponent, test } from 'ember-qunit';
 import TextMaskAddons from 'ember-text-mask-addons';
 import { createAutoCorrectedDatePipe } from 'ember-text-mask-addons';
 
-const { run } = Ember;
+const { run, typeOf } = Ember;
 
 moduleForComponent('auto-corrected-date-pipe', 'Unit | Component | auto corrected date pipe', {
   // Specify the other units that are required for this test
@@ -43,6 +43,21 @@ test('update() method calls textMaskInputElement.update()', function(assert) {
   }));
 
   component.update();
+});
+
+test('createAutoCorrectedDatePipe is a method', function(assert) {
+  assert.expect(1);
+  let component = this.subject();
+  assert.equal(typeOf(component.createAutoCorrectedDatePipe), 'function');
+  this.render();
+});
+
+test('createAutoCorrectedDatePipe() method is called on render', function(assert) {
+  assert.expect(1);
+  this.subject({
+    createAutoCorrectedDatePipe: () => assert.ok(true)
+  });
+  this.render();
 });
 
 test('keepCharPositions should be true', function(assert) {
