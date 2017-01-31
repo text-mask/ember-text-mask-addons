@@ -12,5 +12,5 @@ function _createNumberMask(...args) {
 
 export default MaskedInputComponent.extend({
   createNumberMask,
-  mask: _createNumberMask('prefix', 'suffix', 'includeThousandsSeparator', 'thousandsSeparatorSymbol', 'allowDecimal', 'decimalSymbol', 'decimalLimit', 'requireDecimal', 'allowNegative')
+  mask: _createNumberMask('prefix', 'suffix', 'includeThousandsSeparator', 'thousandsSeparatorSymbol', 'allowDecimal', 'decimalSymbol', 'decimalLimit', 'requireDecimal', 'allowNegative', 'integerLimit')
 });
