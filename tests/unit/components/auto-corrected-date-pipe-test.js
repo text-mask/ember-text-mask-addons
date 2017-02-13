@@ -34,7 +34,7 @@ test('TextMaskAddons.createAutoCorrectedDatePipe is the same as createAutoCorrec
 test('update() method calls textMaskInputElement.update()', function(assert) {
   assert.expect(1);
 
-  let component = this.subject();
+  let component = this.subject({ _textMaskInputElementChanged(){} });
   this.render();
 
   // stub the textMaskInputElement
@@ -52,12 +52,13 @@ test('createAutoCorrectedDatePipe is a method', function(assert) {
   this.render();
 });
 
-test('createAutoCorrectedDatePipe() method is called on render', function(assert) {
+test('createAutoCorrectedDatePipe() method is called', function(assert) {
   assert.expect(1);
-  this.subject({
+  let component = this.subject({
     createAutoCorrectedDatePipe: () => assert.ok(true)
   });
   this.render();
+  component.update();
 });
 
 test('keepCharPositions should be true', function(assert) {

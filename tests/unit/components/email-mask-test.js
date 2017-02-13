@@ -36,7 +36,7 @@ test('TextMaskAddons.emailMask is the same as emailMask', function(assert) {
 test('update() method calls textMaskInputElement.update()', function(assert) {
   assert.expect(1);
 
-  var component = this.subject();
+  var component = this.subject({ _textMaskInputElementChanged(){} });
   this.render();
 
   // stub the textMaskInputElement

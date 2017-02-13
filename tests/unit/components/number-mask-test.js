@@ -34,7 +34,7 @@ test('TextMaskAddons.createNumberMask is the same as createNumberMask', function
 test('update() method calls textMaskInputElement.update()', function(assert) {
   assert.expect(1);
 
-  var component = this.subject();
+  var component = this.subject({ _textMaskInputElementChanged(){} });
   this.render();
 
   // stub the textMaskInputElement
@@ -52,10 +52,11 @@ test('createNumberMask is a method', function(assert) {
   this.render();
 });
 
-test('createNumberMask() method is called on render', function(assert) {
+test('createNumberMask() method is called', function(assert) {
   assert.expect(1);
-  this.subject({
+  let component = this.subject({
     createNumberMask: () => assert.ok(true)
   });
   this.render();
+  component.update();
 });
