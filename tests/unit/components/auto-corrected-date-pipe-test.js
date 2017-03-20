@@ -55,7 +55,12 @@ test('createAutoCorrectedDatePipe is a method', function(assert) {
 test('createAutoCorrectedDatePipe() method is called', function(assert) {
   assert.expect(1);
   let component = this.subject({
-    createAutoCorrectedDatePipe: () => assert.ok(true)
+    createAutoCorrectedDatePipe: () => {
+      assert.ok(true);
+      return (value) => {
+        return { value };
+      };
+    }
   });
   this.render();
   component.update();
