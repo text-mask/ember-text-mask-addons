@@ -55,7 +55,10 @@ test('createNumberMask is a method', function(assert) {
 test('createNumberMask() method is called', function(assert) {
   assert.expect(1);
   let component = this.subject({
-    createNumberMask: () => assert.ok(true)
+    createNumberMask: () => {
+      assert.ok(true);
+      return () => false;
+    }
   });
   this.render();
   component.update();
