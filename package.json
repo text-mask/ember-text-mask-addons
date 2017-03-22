@@ -29,8 +29,8 @@
   "dependencies": {
     "broccoli-merge-trees": "^1.1.4",
     "ember-cli-babel": "^5.1.7",
-    "ember-text-mask": "^4.2.0",
-    "text-mask-addons": "^3.3.0"
+    "ember-text-mask": "^5.0.0",
+    "text-mask-addons": "^3.5.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
