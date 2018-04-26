@@ -1,9 +1,8 @@
-import Ember from 'ember';
 import { moduleForComponent, test } from 'ember-qunit';
 import TextMaskAddons from 'ember-text-mask-addons';
 import { emailMask } from 'ember-text-mask-addons';
-
-const { run } = Ember;
+import { typeOf } from '@ember/utils';
+import { run } from '@ember/runloop';
 
 moduleForComponent('email-mask', 'Unit | Component | email mask', {
   // Specify the other units that are required for this test
@@ -23,9 +22,9 @@ test('it renders', function(assert) {
 
 test('TextMaskAddons.emailMask should be an object with two functions', function(assert) {
   assert.expect(3);
-  assert.equal(Ember.typeOf(TextMaskAddons.emailMask), 'object');
-  assert.equal(Ember.typeOf(TextMaskAddons.emailMask.mask), 'function');
-  assert.equal(Ember.typeOf(TextMaskAddons.emailMask.pipe), 'function');
+  assert.equal(typeOf(TextMaskAddons.emailMask), 'object');
+  assert.equal(typeOf(TextMaskAddons.emailMask.mask), 'function');
+  assert.equal(typeOf(TextMaskAddons.emailMask.pipe), 'function');
 });
 
 test('TextMaskAddons.emailMask is the same as emailMask', function(assert) {

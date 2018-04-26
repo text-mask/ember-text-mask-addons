@@ -1,8 +1,6 @@
-import Ember from 'ember';
 import MaskedInputComponent from 'ember-text-mask/components/masked-input';
 import { createNumberMask } from 'ember-text-mask-addons';
-
-const { computed } = Ember;
+import { computed } from '@ember/object';
 
 function _createNumberMask(...args) {
   return computed(...args, function () {

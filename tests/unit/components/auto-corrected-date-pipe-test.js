@@ -1,9 +1,8 @@
-import Ember from 'ember';
 import { moduleForComponent, test } from 'ember-qunit';
 import TextMaskAddons from 'ember-text-mask-addons';
 import { createAutoCorrectedDatePipe } from 'ember-text-mask-addons';
-
-const { run, typeOf } = Ember;
+import { run } from '@ember/runloop';
+import { typeOf } from '@ember/utils';
 
 moduleForComponent('auto-corrected-date-pipe', 'Unit | Component | auto corrected date pipe', {
   // Specify the other units that are required for this test
@@ -23,7 +22,7 @@ test('it renders', function(assert) {
 
 test('TextMaskAddons.createAutoCorrectedDatePipe should be a function', function(assert) {
   assert.expect(1);
-  assert.equal(Ember.typeOf(TextMaskAddons.createAutoCorrectedDatePipe), 'function');
+  assert.equal(typeOf(TextMaskAddons.createAutoCorrectedDatePipe), 'function');
 });
 
 test('TextMaskAddons.createAutoCorrectedDatePipe is the same as createAutoCorrectedDatePipe', function(assert) {
