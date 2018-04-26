@@ -10,7 +10,8 @@ This Ember-cli addon provides a set of ready-to-use pipes and masks that can be 
   * `autoCorrectedDatePipe`
 
 
-## Installation
+Installation
+------------------------------------------------------------------------------
 
 ```bash
 ember install ember-text-mask-addons
