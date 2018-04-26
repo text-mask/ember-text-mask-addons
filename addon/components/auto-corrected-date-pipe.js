@@ -1,8 +1,7 @@
-import Ember from 'ember';
 import MaskedInputComponent from 'ember-text-mask/components/masked-input';
 import { createAutoCorrectedDatePipe } from 'ember-text-mask-addons';
+import { computed } from '@ember/object';
 
-const { computed } = Ember;
 const dateFormatChars = ['d', 'm', 'y'];
 const defaultDateFormat = 'mm/dd/yyyy';
 
